@@ -6,6 +6,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 public class Blog {
@@ -22,4 +24,6 @@ public class Blog {
     String author;
     String title;
     String text;
+    // Make a list variable to hold comments as a blog can have multiple comments.
+    public List<Comment> comments = new ArrayList<Comment>();
 }
